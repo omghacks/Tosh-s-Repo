@@ -1,0 +1,11 @@
+Hey Tosh,
+
+Mostly made reader-friendly indent fixes and a few caps lock changes (img instead of IMG makes your life easier in terms of Sublime since Sublime doesn't recognize IMG as a self closing tag). You forgot to close some tags, so fixed that too. Don't forget about the <html> tag that surrounds everything else!
+
+Changed the links to class = "Choice" to enable the usage of CSS instead of inline, it works now.
+
+One more thing--might wanna make titles for all your pages so they don't say Fail 2.html at the top and stuff :P
+
+Good work! :)
+
+-- Ruellia
