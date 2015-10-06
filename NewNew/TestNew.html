@@ -1,0 +1,44 @@
+<html>
+
+	<head>
+
+		<title>Javascript</title>
+
+		<script>
+			var score = 0;
+
+			var helloWorld = function() {
+				console.log("if the function runs this text will appear in the console!");
+				if (score<3){
+					alert("Y u do dis :'(");
+				}	else if (score>=3){
+					alert("Ey b0ss pls make it stop")
+				}	else while(true)
+
+			}
+
+			var square = function(){
+				score *= score;
+				alert("Your score is " + score)
+			}
+			//score++ is equal to 
+			//   score = score + 1
+			// also written score += 1
+			// this can be used for other functions like -, *, and /.
+			var subtract = function(){
+				score--;
+				alert("Your score is " + score)
+			}
+
+			</script>
+
+	</head>
+
+	<body>
+		<button type="button" onclick="helloWorld()">The One Button You Shouldn't Press</button>
+		<br>
+		<button type="button" onclick="square()">Square</button>
+		<br/><br/>
+		<button type="button" onclick="subtract()">Lose One</button>
+	</body>
+</html>
