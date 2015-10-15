@@ -4,30 +4,24 @@
 
 		<title>Javascript</title>
 
-		<script>
-			var score = 0;
-
-			var helloWorld = function() {
-				console.log("if the function runs this text will appear in the console!");
-				if (score<3){
-					alert("Y u do dis :'(");
-				}	else if (score>=3){
-					alert("Ey b0ss pls make it stop")
-				}	else while(true)
-
+			<script>
+			var changeTextColor = function() {
+				var color = prompt("What color?", "red");
+				document.getElementById("changeMe").style.color = color;
 			}
 
-			var square = function(){
-				score *= score;
-				alert("Your score is " + score)
+			var changeText = function() {
+				var toInsert = prompt("What should the paragraph say?", "Type here");
+				if (toInsert.length === 0) {
+					return;
+				}
+				document.getElementById("changeMe").innerHTML = toInsert;
 			}
-			//score++ is equal to 
-			//   score = score + 1
-			// also written score += 1
-			// this can be used for other functions like -, *, and /.
-			var subtract = function(){
-				score--;
-				alert("Your score is " + score)
+			
+			var changeTheme = function(text, background, font){
+				document.getElementById("changeMe").style.color = text;
+				document.getElementsByTagName("body")[0].style.backgroundColor = background;
+				document.getElementById("changeMe").style.fontFamily = font;
 			}
 
 			</script>
@@ -35,10 +29,11 @@
 	</head>
 
 	<body>
-		<button type="button" onclick="helloWorld()">The One Button You Shouldn't Press</button>
+		<button type="button" onclick="changeTextColor()">What Text Color should I have?</button>
 		<br>
-		<button type="button" onclick="square()">Square</button>
+		<p id="changeMe"> What Should I Say?</p>
 		<br/><br/>
-		<button type="button" onclick="subtract()">Lose One</button>
+		<button type="button" onclick="changeTheme('red', 'green', 'cursive')">Change theme to Christmas</button>
+		<button type="button" onclick="changeTheme('blue', 'white', 'comicsans')">Change theme to basic Theme</button>
 	</body>
 </html>
