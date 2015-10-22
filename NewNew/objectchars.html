@@ -1,0 +1,55 @@
+<!HTML>
+<head>
+<title> Characters are cool </title>
+<script>
+var count = 0;
+
+var pinkguyStats = {
+	characterClass: "Knight",
+	Health: 100,
+	STR: 18,
+	DEX: 16,
+	CON: 14,
+	INT: 7,
+	WIS: 6,
+	CHR: 17,
+	message: function(){
+		if (count < 2) {
+			console.log("balhadjafasdf");
+		} else {
+			console.log("uigasfdhjbk");
+			message();
+		}
+		count++;
+	}
+}
+var showStats = function() {
+	alert("Pink guy is a " + pinkguyStats.characterClass)
+	alert("Pink guy has " + pinkguyStats.Health + " Health")
+	alert("Pink guy has " + pinkguyStats.STR + " Strength")
+	alert("Pink guy has " + pinkguyStats.DEX + " Dexterity")
+	alert("Pink guy has " + pinkguyStats.CON + " Constitution")
+	alert("Pink guy has " + pinkguyStats.INT + " Intelligence")
+	alert("Pink guy has " + pinkguyStats.WIS + " Wisdom")
+	alert("Pink guy has " + pinkguyStats.CHR + " Charisma")
+}
+var message = function() {
+	var text = document.getElementById("changeablet");
+	if (count === 2) {
+		text.style.color = "red";
+		text.style.fontSize = 50;
+		text.innerHTML =" Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss Ey b0ss"
+		document.getElementsByTagName("body")[0].style.backgroundColor = "black";
+	}
+}
+</script>
+
+</head>
+
+<body>
+<button type="button" onclick="showStats()">Find out about Pink Guy</button>
+<button type="button" onclick="pinkguyStats.message()">???</button>
+<p id = "changeablet" style = "color: white;">nothing to see here.</p>
+
+
+</body>
